@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "isomorphic-fetch";
+import Layout from "../components/Layout";
 
 export default class extends React.Component {
   static async getInitialProps({ query }) {
@@ -29,9 +30,7 @@ export default class extends React.Component {
   render() {
     const { channel, audioClips, series } = this.props;
     return (
-      <div>
-        <header>Podcasts</header>
-
+      <Layout>
         <div
           className="banner"
           style={{
@@ -130,7 +129,7 @@ export default class extends React.Component {
             background: white;
           }
         `}</style>
-      </div>
+      </Layout>
     );
   }
 }
