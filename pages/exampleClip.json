@@ -1,0 +1,54 @@
+{
+  "window": 60,
+  "version": 200,
+  "timestamp": 1557547220,
+  "api_warning": "You should include a version number in your API requests",
+  "body": {
+    "audio_clip": {
+      "id": 6942552,
+      "title": "No me Olvidé de Vos: Santi & Lupe",
+      "description": "Inventamos personajes que se mandan cartas para decirse lo que no pueden o no quieren. Casi 200 historias, casi 500 personajes. Dos estilos dispares atados con amor, con dolor, con valentía y con alambre. Tratar de darle cauce al sentir: ese es el punto de partida de cada historia.\r\n\r\nCreado por Belén Marchese y Julieta Habif.\r\n\r\n[](http://nomeolvidedevos.com/)\r\n\r\n[Leé toda la correspondencia de No me Olvidé de Vos.](http://nomeolvidedevos.com/)\r\n\r\n¿Querés No me Olvidé de Vos en papel? [Conseguí los libros.](http://nomeolvidedevos.com/libro/)",
+      "updated_at": "2018-07-23T20:11:12.000Z",
+      "user": {
+        "id": 4689293,
+        "username": "lucianobanchero",
+        "counts": { "audio_clips": 0, "followers": 1, "followings": 6 },
+        "urls": {
+          "profile": "https://audioboom.com/lucianobanchero",
+          "image": "https://images.theabcdn.com/i/21351474",
+          "profile_image": {
+            "original": "https://images.theabcdn.com/i/21351474"
+          }
+        }
+      },
+      "link_style": "channel",
+      "channel": {
+        "id": 4702115,
+        "title": "POSTA",
+        "urls": {
+          "detail": "https://audioboom.com/channel/postafm",
+          "logo_image": { "original": "https://images.theabcdn.com/i/28456821" }
+        }
+      },
+      "duration": 904.32,
+      "mp3_filesize": 14538078,
+      "uploaded_at": "2018-07-23T13:34:21.000Z",
+      "recorded_at": "2018-07-23T13:34:21.000+00:00",
+      "uploaded_at_ts": 1532352861,
+      "recorded_at_ts": 1532352861,
+      "can_comment": false,
+      "can_embed": true,
+      "category_id": 179,
+      "counts": { "comments": 0, "likes": 0, "plays": 1233 },
+      "urls": {
+        "detail": "https://audioboom.com/posts/6942552-no-me-olvide-de-vos-santi-lupe",
+        "high_mp3": "https://audioboom.com/posts/6942552-no-me-olvide-de-vos-santi-lupe.mp3",
+        "image": "https://images.theabcdn.com/i/33148187",
+        "post_image": { "original": "https://images.theabcdn.com/i/33148187" },
+        "wave_img": "https://images.theabcdn.com/i/w/7980264"
+      },
+      "tags": [],
+      "image_attachment": 33148187
+    }
+  }
+}

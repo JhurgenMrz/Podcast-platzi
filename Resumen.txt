@@ -1,0 +1,77 @@
+npm init -y --->Package.json (Documentacion del Proyecto) inicial de 0 
+Scripts Indispensables para Next.js -dev,           (Entorno de Desarrollo)
+                                     -build y -start(Producción)
+Romper las reglas: <style jsx global></style>
+                    Operador :global()
+                      :global(p){
+                          //Afecta a todos los <p>
+                      }
+                      div :global(p){
+                          //tomas el div, y todos los p dentro del <p> 
+                          van a tener el mismo estilo
+                      }
+
+///////////----- getInitialProps ------////////////
+La función getInitialProps nos permite cargar el contenido principal de la página cuando tenemos que recurrir a una API.
+
+static async getInicialProps() {
+  //aquí traemos los datos
+  let request = await fetch('url')
+  let datos = await request.json()
+  return { datos }
+}
+Luego de cargar los datos, los va a agregar a los props de React.
+
+getInitialProps() solamente funciona en pages y es parte de next.js. No va a funcionar con otras librerías o frameworks.
+
+Cuando se trabaja con Server Side Rendering, algunos métodos dejan de funcionar. Esto se debe a que la función ya no está corriendo por el navegador sino desde el servidor.
+
+En este caso, vamos a instalar isomorphic-fetch que nos va a permitir usar fetch desde node.js.
+
+$ npm add isomorphic-fetch
+Para usarlo, solo debe de importarse.
+
+import 'isomorphic-fetch';
+
+
+//////////--------------Enlazando Páginas-------------//////////////
+Next usa un componente llamado <Link/> que debe de contener un <a>.
+
+import Link from 'next/link';
+
+<Link href='/channel'>
+  <a className="channel">
+    click me
+  </a>
+</Link>
+Nota: El href va en el <Link>. No en el <a>.
+
+Si clickeamos en un Link:
+
+Client Side Rendering.
+Carga sólo lo que falta de esa página.
+Cambia la ruta en el browser.
+Si abrimos un nuebo tab:
+
+Server Side Rendering.
+Carga todo el HTML, CSS y JS.
+Crea una nueva sesión.
+Prefetch
+Prefetch le indica a next que el Link es importante y que vaya precargando el contenido por adelantado y así se ahorra un poco de tiempo de carga.
+
+Prefetch solo funciona en producción (npm run build && npm start).
+
+<Link href='/channel' prefetch>
+  <a>...</a>
+</Link>
+Prefetch no precarga getInitialProps. Solo precarga HTML, CSS y JS.
+
+¿Qué pasa si repito prefetch? Por ejemplo, si está dentro de un map().
+Cada página solo se precarga una vez.
+
+//////////---------Recibiendo Parámetros---------//////////
+// /pagina?id=54412
+staticasync getInitialProps({query}) {
+  let id = query.id;
+}
+                                    
